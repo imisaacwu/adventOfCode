@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Day6 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new File("AoC2023/Day6.txt"));
+        Scanner file = new Scanner(new File("AoC2023/input/Day6.txt"));
         // Part 1
         int[][] dist = new int[4][98];
         String[] times, records;

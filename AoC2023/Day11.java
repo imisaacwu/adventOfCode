@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class Day11 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new File("AoC2023/Day11.txt"));
+        Scanner file = new Scanner(new File("AoC2023/input/Day11.txt"));
         List<List<Character>> img = new ArrayList<>();
         List<List<Character>> imgBig = new ArrayList<>();
         List<Galaxy> galaxies = new ArrayList<>();

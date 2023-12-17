@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Day12 {
     private static final Map<Input, Long> memo = new HashMap<>();
     public static void main(String[] args) throws FileNotFoundException, OutOfMemoryError {
-        Scanner file = new Scanner(new File("AoC2023/Day12.txt"));
+        Scanner file = new Scanner(new File("AoC2023/input/Day12.txt"));
         long perms = 0, unfoldedPerms = 0;
         while(file.hasNextLine()) {
             String[] in = file.nextLine().split(" ");

@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class Day4 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new File("AoC2023/Day4.txt"));
+        Scanner file = new Scanner(new File("AoC2023/input/Day4.txt"));
         int points = 0, wins, cards = 0, i = 1;
         Set<String> winning;
         int[] copies = new int[208];

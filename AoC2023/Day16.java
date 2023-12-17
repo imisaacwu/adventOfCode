@@ -11,7 +11,7 @@ import lib.Utils;
 
 public class Day16 {
     public static void main(String[] args) throws FileNotFoundException {
-        Grid g = new Grid(Utils.read("AoC2023/Day16.txt"));
+        Grid g = new Grid(Utils.read("AoC2023/input/Day16.txt"));
         int first = 0, most = -1;
         for(int i = 0; i < g.width; i++) {
             Set<T.P<C, Grid.dir>> lit = new HashSet<>();

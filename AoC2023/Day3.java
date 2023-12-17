@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Day3 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new File("AoC2023/Day3.txt"));
+        Scanner file = new Scanner(new File("AoC2023/input/Day3.txt"));
         List<char[]> schematic = new ArrayList<>();
         while(file.hasNextLine()) {
             schematic.add(file.nextLine().toCharArray());

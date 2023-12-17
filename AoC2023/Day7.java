@@ -14,7 +14,7 @@ import java.util.TreeSet;
 
 public class Day7 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new File("AoC2023/Day7.txt"));
+        Scanner file = new Scanner(new File("AoC2023/input/Day7.txt"));
         List<Hand> hands = new ArrayList<>(), hands2 = new ArrayList<>();
         while(file.hasNextLine()) {
             String s = file.nextLine();

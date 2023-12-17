@@ -9,7 +9,7 @@ import lib.Utils;
 
 public class Day14 {
     public static void main(String[] args) throws FileNotFoundException {
-        Grid g = new Grid(Utils.read("AoC2023/Day14.txt"));
+        Grid g = new Grid(Utils.read("AoC2023/input/Day14.txt"));
         Map<String, Long> index = new HashMap<>();
         int firstLoad = 0;
         for(long cycle = 0; cycle < 1000000000; cycle++) {

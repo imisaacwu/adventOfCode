@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Day2 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new File("AoC2023/Day2.txt"));
+        Scanner file = new Scanner(new File("AoC2023/input/Day2.txt"));
         int game = 1, count = 0;
         int[][] min = new int[101][3];
         while(file.hasNextLine()) {

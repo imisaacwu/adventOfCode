@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 public class Day9 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new File("AoC2023/Day9.txt"));
+        Scanner file = new Scanner(new File("AoC2023/input/Day9.txt"));
         int sum = 0, backSum = 0, k;
         while(file.hasNextLine()) {
             List<List<Integer>> seq = new ArrayList<>();

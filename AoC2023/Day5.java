@@ -9,7 +9,7 @@ import java.util.TreeSet;
 
 public class Day5 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new File("AoC2023/Day5.txt"));
+        Scanner file = new Scanner(new File("AoC2023/input/Day5.txt"));
         String[] seeds = file.nextLine().split(": ")[1].split(" ");
         ArrayList<Transform> changes = new ArrayList<>();
         while(file.hasNextLine()) {

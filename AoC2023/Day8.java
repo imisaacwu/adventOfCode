@@ -12,7 +12,7 @@ import java.util.stream.IntStream;
 
 public class Day8 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new File("AoC2023/Day8.txt"));
+        Scanner file = new Scanner(new File("AoC2023/input/Day8.txt"));
         int steps = 0, allSteps = 0;
         char[] lr = file.nextLine().toCharArray();
         Map<String, List<String>> nodes = new HashMap<>();

@@ -11,7 +11,7 @@ import lib.T;
 
 public class Day15 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new File("AoC2023/Day15.txt"));
+        Scanner file = new Scanner(new File("AoC2023/input/Day15.txt"));
         String s = file.nextLine();
         int sum = 0, power = 0;
         List<LL<T.P<String, Integer>>> boxes = new ArrayList<>();
