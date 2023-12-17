@@ -7,6 +7,7 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Grid {
+    public static enum dir { N, E, S, W }
     public List<List<Character>> grid;
     public int width, height;
 
@@ -15,17 +16,16 @@ public class Grid {
         while(in.hasNextLine()) {
             grid.add(in.nextLine().chars().mapToObj(i->(char)i).collect(Collectors.toList()));
         }
-        width = grid.get(0).size();
-        height = grid.size();
+        updateSize();
     }
 
     public Grid(List<List<Character>> grid) {
         this.grid = grid;
-        width = grid.get(0).size();
-        height = grid.size();
+        updateSize();
     }
 
     public char get(int r, int c) { return grid.get(r).get(c); }
+    public char get(C coord) { return get(coord.v0, coord.v1); }
     public void set(int r, int c, char x) { grid.get(r).set(c, x); }
 
     public void rotateCW() {
@@ -38,6 +38,7 @@ public class Grid {
             g.add(col);
         }
         grid = g;
+        updateSize();
     }
 
     public void rotateCCW() {
@@ -50,10 +51,20 @@ public class Grid {
             g.add(col);
         }
         grid = g;
+        updateSize();
     }
 
     public void transpose() {
-
+        List<List<Character>> g = new ArrayList<>();
+        for(int c = 0; c < width; c++) {
+            List<Character> toRow = new ArrayList<>();
+            for(int r = 0; r < height; r++) {
+                toRow.add(get(r, c));
+            }
+            g.add(toRow);
+        }
+        grid = g;
+        updateSize();
     }
 
     public List<Character> getRow(int row) {
@@ -80,5 +91,10 @@ public class Grid {
 
     public boolean equals(Object other) {
         return other instanceof Grid && Arrays.equals(((Grid)other).grid.toArray(), this.grid.toArray());
+    }
+
+    private void updateSize() {
+        width = grid.get(0).size();
+        height = grid.size();
     }
 }
