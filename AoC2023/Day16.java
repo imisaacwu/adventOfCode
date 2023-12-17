@@ -1,19 +1,17 @@
 package AoC2023;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashSet;
-import java.util.Scanner;
 import java.util.Set;
 
 import lib.C;
 import lib.Grid;
 import lib.T;
+import lib.Utils;
 
 public class Day16 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new File("AoC2023/Day16.txt"));
-        Grid g = new Grid(file);
+        Grid g = new Grid(Utils.read("AoC2023/Day16.txt"));
         int first = 0, most = -1;
         for(int i = 0; i < g.width; i++) {
             Set<T.P<C, Grid.dir>> lit = new HashSet<>();

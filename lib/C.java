@@ -15,32 +15,16 @@ public class C extends T.P<Integer, Integer> {
     public void move(Grid.dir dir) {
         switch(dir) {
             case N:
-                if(ARRAY) {
-                    v0--;
-                } else {
-                    v1++;
-                }
+                if(ARRAY) { v0--; } else { v1++; }
                 break;
             case E:
-                if(ARRAY) {
-                    v1++;
-                } else {
-                    v0++;
-                }
+                if(ARRAY) { v1++; } else { v0++; }
                 break;
             case S:
-                if(ARRAY) {
-                    v0++;
-                } else {
-                    v1--;
-                }
+                if(ARRAY) { v0++; } else { v1--; }
                 break;
             case W:
-                if(ARRAY) {
-                    v1--;
-                } else {
-                    v0--;
-                }
+                if(ARRAY) { v1--; } else { v0--; }
                 break;
         }
     }

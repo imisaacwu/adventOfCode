@@ -1,17 +1,15 @@
 package AoC2023;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 import lib.Grid;
+import lib.Utils;
 
 public class Day14 {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new File("AoC2023/Day14.txt"));
-        Grid g = new Grid(file);
+        Grid g = new Grid(Utils.read("AoC2023/Day14.txt"));
         Map<String, Long> index = new HashMap<>();
         int firstLoad = 0;
         for(long cycle = 0; cycle < 1000000000; cycle++) {

@@ -3,7 +3,6 @@ package lib;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Grid {
@@ -11,16 +10,20 @@ public class Grid {
     public List<List<Character>> grid;
     public int width, height;
 
-    public Grid(Scanner in) {
-        grid = new ArrayList<>();
-        while(in.hasNextLine()) {
-            grid.add(in.nextLine().chars().mapToObj(i->(char)i).collect(Collectors.toList()));
+    public static List<Grid> split(List<String> in, String s) {
+        List<Grid> grids = new ArrayList<>();
+        while(in.indexOf(s) > 0) {
+            grids.add(new Grid(in.subList(0, in.indexOf(s))));
+            in = in.subList(in.indexOf(s)+1, in.size());
         }
-        updateSize();
+        return grids;
     }
 
-    public Grid(List<List<Character>> grid) {
-        this.grid = grid;
+    public Grid(List<String> in) {
+        grid = new ArrayList<>();
+        for(String s : in) {
+            grid.add(s.chars().mapToObj(i->(char)i).collect(Collectors.toList()));
+        }
         updateSize();
     }
 
