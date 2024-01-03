@@ -14,12 +14,12 @@ public class Day15 {
         Scanner file = new Scanner(new File("AoC2023/input/Day15.txt"));
         String s = file.nextLine();
         int sum = 0, power = 0;
-        List<LL<T.P<String, Integer>>> boxes = new ArrayList<>();
+        List<LL<T._2<String, Integer>>> boxes = new ArrayList<>();
         while(boxes.size() < 256) { boxes.add(new LL<>(null)); }
         for(String i : s.split(",")) {
             int hash = hash(i.split("-|=")[0]);
-            LL<T.P<String, Integer>> box = boxes.get(hash);
-            LL<T.P<String, Integer>>.Node curr = box.head;
+            LL<T._2<String, Integer>> box = boxes.get(hash);
+            LL<T._2<String, Integer>>.Node curr = box.head;
             if(curr != null && curr.data.v0.equals(i.split("-|=")[0])) {
                 if(i.contains("-")) {
                     box.head = box.head.next;
@@ -41,14 +41,14 @@ public class Day15 {
                     curr = curr.next;
                 }
                 if(!done && i.contains("=")) {
-                    box.add(new T.P<String, Integer>(i.split("=")[0], Integer.parseInt(i.split("=")[1])));
+                    box.add(new T._2<String, Integer>(i.split("=")[0], Integer.parseInt(i.split("=")[1])));
                 }
             }
             sum += hash(i);
         }
         for(int i = 0; i < boxes.size(); i++) {
             if(boxes.get(i).head != null) {
-                LL<T.P<String, Integer>>.Node curr = boxes.get(i).head;
+                LL<T._2<String, Integer>>.Node curr = boxes.get(i).head;
                 int slot = 1;
                 while(curr != null) {
                     power += (i+1) * slot++ * curr.data.v1;
