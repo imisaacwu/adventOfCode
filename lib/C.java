@@ -1,39 +1,46 @@
 package lib;
 
 // Coordinate
-public class C extends T.P<Integer, Integer> {
+public class C extends T._2<Integer, Integer> {
     public final boolean ARRAY;
 
-    public C(int x, int y, boolean array) {
-        super(x, y);
+    public C(int v0, int v1, boolean array) {
+        super(v0, v1);
         this.ARRAY = array;
     }
-    public C(int x, int y) {
-        this(x, y, true);
+    public C(int v0, int v1) {
+        this(v0, v1, true);
     }
 
-    public void move(Grid.dir dir) {
+    public void move(int dir) {
         switch(dir) {
-            case N:
+            case Grid.dir.N:
                 if(ARRAY) { v0--; } else { v1++; }
                 break;
-            case E:
+            case Grid.dir.E:
                 if(ARRAY) { v1++; } else { v0++; }
                 break;
-            case S:
+            case Grid.dir.S:
                 if(ARRAY) { v0++; } else { v1--; }
                 break;
-            case W:
+            case Grid.dir.W:
                 if(ARRAY) { v1--; } else { v0--; }
                 break;
         }
     }
 
-    public C rel(Grid.dir dir) {
+    public C rel(int dir, int n) {
         C c = new C(v0, v1);
-        c.move(dir);
+        for(int i = 0; i < n; i++) {
+            c.move(dir);
+        }
         return c;
     }
+
+    public C rel(int dir) {
+        return rel(dir, 1);
+    }
+
     public String toString() {
         return String.format(ARRAY ? "[%s][%s]" : "(%s, %s)", v0, v1);
     }
