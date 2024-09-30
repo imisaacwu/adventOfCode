@@ -30,6 +30,7 @@ public class Day7 {
         }
 
         System.out.printf("Total winnings: %s\nTotal winnings (with Jokers): %s\n", winnings, winnings2);
+        file.close();
     }
 
     public static class Hand implements Comparable<Hand> {

@@ -33,5 +33,6 @@ public class Day4 {
             i++;
         }
         System.out.printf("Total points: %s\nTotal cards: %s\n", points, cards);
+        file.close();
     }
 }

@@ -35,6 +35,7 @@ public class Day8 {
         }
 
         System.out.printf("Steps to reach ZZZ: %s\nTotal steps for all **Z: %s\n", steps, lcmArr(zLoop, 0, zLoop.length));
+        file.close();
     }
 
     public static long lcmArr(int[] arr, int start, int end) {

@@ -38,5 +38,6 @@ public class Day6 {
         }
 
         System.out.printf("Total ways to win: %s\nTotal ways to win (long race): %s\n", total, wins);
+        file.close();
     }
 }

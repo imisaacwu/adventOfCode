@@ -28,5 +28,6 @@ public class Day1 {
             count += (s.charAt(0) - '0') * 10 + (s.charAt(s.length() - 1) - '0');
         }
         System.out.println(count);
+        file.close();
     }
 }

@@ -53,6 +53,7 @@ public class Day5 {
         }
 
         System.out.printf("Lowest location from seeds: %s\nLowest location from seed ranges: %s\n", lowest, lowestRange);
+        file.close();
     }
 
     private static class Transform {

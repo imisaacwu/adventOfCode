@@ -30,6 +30,7 @@ public class Day3 {
         }
 
         System.out.printf("Sum of part #s: %s\nSum of gear ratios: %s", count, ratios);
+        file.close();
     }
 
     public static int sumParts(List<char[]> schematic, int row, int col) {

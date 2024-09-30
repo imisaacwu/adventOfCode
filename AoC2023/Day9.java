@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Day9 {
@@ -13,7 +14,7 @@ public class Day9 {
         int sum = 0, backSum = 0, k;
         while(file.hasNextLine()) {
             List<List<Integer>> seq = new ArrayList<>();
-            seq.add(Stream.of(file.nextLine().split(" ")).mapToInt((e) -> { return Integer.parseInt(e); }).boxed().toList());
+            seq.add(Stream.of(file.nextLine().split(" ")).mapToInt(Integer::parseInt).boxed().collect(Collectors.toList()));
             k = 0;
             do {
                 k++;
@@ -33,5 +34,6 @@ public class Day9 {
         }
         
         System.out.printf("Sum (front): %s\nSum (back): %s\n", sum, backSum);
+        file.close();
     }
 }
