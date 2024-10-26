@@ -1,2 +1,5 @@
 # macOS Finger proprietary
 .DS_Store
+
+# Old AOCs
+AoC2023/
