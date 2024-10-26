@@ -71,6 +71,7 @@ public class Day11 {
         }
 
         System.out.printf("Sum of all paths: %s\nSum of all expanded paths: %s\n", sum, sumBig);
+        file.close();
     }
 
     public static boolean empty(List<List<Character>> img, int col) {
